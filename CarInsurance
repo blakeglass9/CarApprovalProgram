@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Set the title of the console window
+        Console.Title = "Car Insurance Approval Program";
+
+        // Ask the applicant's age and store it as an integer
+        Console.WriteLine("What is your age?");
+        int age = Convert.ToInt32(Console.ReadLine());
+
+        // Ask if the applicant has ever had a DUI and store it as a boolean
+        Console.WriteLine("Have you ever had a DUI? Please answer \"true\" or \"false.\"");
+        bool hasDUI = Convert.ToBoolean(Console.ReadLine());
+
+        // Ask how many speeding tickets the applicant has and store it as an integer
+        Console.WriteLine("How many speeding tickets do you have?");
+        int speedingTickets = Convert.ToInt32(Console.ReadLine());
+
+        // Create a boolean expression to check if the applicant qualifies
+        bool isQualified = (age > 15 && hasDUI == false && speedingTickets <= 3);
+
+        // Output the result of the boolean expression (true or false)
+        Console.WriteLine("Qualified?");
+        Console.WriteLine(isQualified);
+
+        // Pause the program so the user can see the result
+        Console.ReadKey();
+    }
+}
